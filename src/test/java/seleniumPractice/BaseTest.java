@@ -15,6 +15,7 @@ public class BaseTest {
 
     @BeforeTest
     void openSite() {
+        //    WebDriverManager.edgedriver().setup();
         driver = new EdgeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().window().maximize();
