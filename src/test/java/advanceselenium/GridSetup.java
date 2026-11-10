@@ -1,4 +1,4 @@
-package seleniumgrid;
+package advanceselenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
@@ -13,7 +13,7 @@ import java.net.URL;
 public class GridSetup {
 
     public static void main(String[] args) throws MalformedURLException {
-        
+
         DesiredCapabilities dc = new DesiredCapabilities();
         dc.setPlatform(Platform.WIN11);
         dc.setBrowserName(Browser.EDGE.browserName());
