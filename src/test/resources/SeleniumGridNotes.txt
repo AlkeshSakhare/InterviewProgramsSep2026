@@ -1,0 +1,23 @@
+1)Standalone:
+-------------
+ i) Download selenium-server from https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.52.0/selenium-server-4.52.0.jar
+ ii) Run command to start standalone server
+   java -jar selenium-server.jar standalone
+ iii) URL session -> http://localhost:4444
+
+2)Hub and Node: (Hub and Node(s) both machine should be in same network)
+----------------
+ i) Download selenium-server from https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.52.0/selenium-server-4.52.0.jar in all nodes and hub
+ ii) Run command to start hub
+   java -jar selenium-server.jar hub
+ iii) Run command to register node to hub
+   java -jar selenium-server.jar node --hub http://<HUB-IPADDRESS>:4444
+ iv) URL session -> http://localhost:4444 or ipaddress of hub machine
+
+
+ **********************************  JAVA CODE  **********************************
+DesiredCapabilities dc = new DesiredCapabilities();
+dc.setPlatform(Platform.WIN11);   // need to tell which machine OS
+dc.setBrowserName(Browser.EDGE.browserName()); // need to tell which browser
+WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), dc);
+*************************************************************************************

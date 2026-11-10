@@ -40,3 +40,5 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+src/test/resources/selenium-server-4.52.0.jar
